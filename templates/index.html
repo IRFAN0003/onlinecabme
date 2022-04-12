@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.1.0-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title></title>
+</head>
+<body>
+    <!-- include navbar -->
+    {% include 'includes/navbar.html' %}
+
+    <!-- home pages -->
+
+    {% block home_page %} {% endblock %}
+
+    <!-- login pages -->
+
+    {% block login_page %} {% endblock %}
+
+    <!-- register_page -->
+
+    {% block register_page %} {% endblock %}
+
+    <!-- contact_page -->
+
+    {% block contact_page %} {% endblock %}
+
+    <!-- about_page -->
+
+    {% block about_page %} {% endblock %}
+    
+    <!-- dashboard page -->
+
+    {% block dashboard_page %} {% endblock %}
+
+    <!-- forggotten_password -->
+
+    {% block forgotten_password %} {% endblock %}
+
+    {% block ride_page %} {% endblock %}
+
+    {% block vehicle_page %} {% endblock %}
+
+
+    {% block driver_page %} {% endblock %}
+
+
+
+    {% block content %}{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <script src="{% static 'fontawesome-free-6.1.0-web/js/all.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

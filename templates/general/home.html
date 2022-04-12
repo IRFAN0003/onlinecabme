@@ -1,0 +1,90 @@
+{% extends 'index.html' %} {% load static %} {% block home_page %}
+
+  <div class="images_home w-75 h-5">
+  <img
+    src="{% static 'images/pexels-uriel.jpg.' %}"
+    alt=""
+    width="1350"
+    height="700"
+    style="overflow-x: hidden;"
+  />
+
+{% comment %} 
+  <div class="register_page d-flex justify-content-center align-items-centter">
+    <div class="row vh-100 ">
+      <div class="col-lg-6">
+        <div class="card ">
+          <h3 class="d-flex justify-content-center aligni-items-center" >Where to go</h3>
+          <div class="card-body d-flex justify-content-center align-items-centter " id="">
+  
+            <form action="" method="post"class="" >
+              {% csrf_token %} {{ form.as_p}}
+              <div class="">
+                <button  >Request Now</button>
+  
+                <button>shedule for later</button>
+               </div> 
+              
+  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+
+
+
+
+
+</div> 
+
+  <div class="row align-items-md-stretch mt-2">
+    <div class="col-md-4">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <h2>online cab Rentals</h2>
+        <p>Swap the background-color utility and add a</p>
+        <button class="btn btn-outline-light" type="button">
+          Example button
+        </button>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <h2>Focused on safety, wherever you go</h2>
+        <p>Or, keep it light and add a border for some added definition</p>
+        <button class="btn btn-outline-secondary" type="button">
+          Example button
+        </button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <h2>ASDAS</h2>
+        <p>Swap the background-color utility and add a</p>
+        <button class="btn btn-outline-light" type="button">
+          Example button
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="container bg-black text-white vw-100 m-0">
+    <hr> 
+    <p><h6>Company:</h6></p>
+    <p ><a class="text-decoration-none text-white" href="{% url 'contact' %}">Contact Us</a></p>
+    <p  ><a class="text-decoration-none text-white " href="{% url 'about' %}">About Us</a></p>
+    
+    <hr> 
+    <h6>Social Links:</h6>
+  
+    <a href="" class="btn btn-sm  github bg-dark text-white"><i class="fa-brands fa-github"></i> </a>
+    <a class="btn bg-danger text-white  btn-sm"><i class="fa-brands fa-google-plus-g"></i></a>
+  
+    
+    <p class="float-end"><a  class="text-decoration-none text-white " href="#">Back to top</a></p>
+    <p class="d-flex justify-content-center align-items center">© 2022 Company, Inc</p>
+  </footer>
+</div>
+{% endblock %}

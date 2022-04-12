@@ -1,0 +1,40 @@
+{% extends 'profiles/dashboard.html' %} {% block trip_details_page %}
+
+<div class="contaniner-fluid">
+    <div class="row ">
+        <div class="col">
+            <!-- {% if user.is_staff %} -->
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{object.name}}</td>
+                    </tr>
+                
+                    <tr>
+                        <th>Status</th>
+                        <td>{{object.status}}</td>
+                    </tr>
+                    <tr>
+                        <th>Created on</th>
+                        <td>{{object.created_on}}</td>
+                    </tr>
+                    <tr>
+                        <th>Updated on</th>
+                        <td>{{object.updated_on}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="{% url 'hotel_update' object.id %}">Update</a>
+            {% else %}
+            <div class="px-3">
+                <div class="header">
+                    <h3 class="">{{object.name | title}}</h3>
+                </div>
+              
+            {% endif %}
+        </div>
+    </div>
+</div> 
+
+{% endblock trip_details_page %}

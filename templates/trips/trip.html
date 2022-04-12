@@ -1,0 +1,48 @@
+{% extends 'profiles/dashboard.html' %}{% load static %} {% block listtrip_page %}
+
+
+<nav class="dashboard_navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'trip_create' %}">Create</a>
+          </li>
+     
+        </ul>
+    
+      </div>
+    </div>
+  </nav>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for trip in object_list %}
+      <tr>
+        <td>{{trip.id}}</td>
+        <td>{{trip.name}}</td>
+        <td>
+          <a class="btn btn-primary" href="{% url 'details' trip.id %}">details</a>
+          <a class="btn btn-primary" href="{% url 'update' trip.id %}">Update</a>
+          <a class="btn btn-danger" href="{% url  'delete' trip.id %}">delete</a>
+
+        </td>
+
+      </tr>
+      {% endfor%}
+    </tbody>
+    
+  </table>
+
+{% endblock %}

@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+/* ........................ */
+/* .......navbar_Pages...... */
+/* ........................ */
+
+/* 
+.navbar{
+  background-color: rgb(54, 120, 146);
+  background:linear-gradient( to right, #F0C27B,#4B1248) ;
+  color: white;
+  animation: nav-bar; */
+.navbar {
+  background: linear-gradient(270deg, #133267, #f5060f, #184507);
+  background-size: 600% 600%;
+
+  -webkit-animation: nav-bar 30s ease infinite;
+  animation: nav-bar 30s ease infinite;
+}
+
+@-webkit-keyframes nav-bar {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes nav-bar {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+.navbar a {
+  color: white;
+
+
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+
+.dropbtn {
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ........................ */
+/* .......login_Pages...... */
+/* ........................ */
+
+.login-page {
+  background-color: #133267;
+}
+
+
+.login-page form {
+  padding: 0 40px;
+
+}
+
+
+.login-page .errorlist.nonfield {
+  /* position: relative;
+  list-style: none;
+  padding: 20px;
+  border-radius: 10px; */
+  color: red;
+  background-color: #ececec;
+}
+
+.login-page form p input {
+  width: 100%;
+  padding: 0 5px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid black
+}
+
+.login-page .card {
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  box-shadow: 15px;
+  border-radius: 15px;
+}
+
+
+.btn-register {
+  color: #ffff;
+  border: none;
+  background: none;
+  border-radius: 40px;
+}
+
+.btn-language {
+  color: #ffff;
+  border: none;
+  background: none;
+}
+
+/* ........................ */
+/* ...contact_pages....... */
+/* ........................ */
+
+.contact_pages {
+  background-color: #0e203f;
+}
+
+.contact_pages .card {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: none;
+  border-radius: 10px;
+  box-shadow: 20px;
+}
+
+.countact_text {
+  display: block;
+  width: 100%;
+  margin: 16px 0;
+  padding: 10px 30px;
+  outline: none;
+}
+
+
+.contact_pages button {
+  float: right;
+  font-family: inherit;
+  font-size: 15px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.contact_pages button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact_pages button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact_pages button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.contact_pages button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.contact_pages button:hover span {
+  transform: translateX(5em);
+}
+
+.contact_pages button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+#comment {
+  height: 100px;
+}
+
+
+/* ........................ */
+/* ...about_pages....... */
+/* ........................ */
+
+
+.about-page {
+  margin-top: 56px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0a1b49;
+
+}
+
+.about-page .card {
+  border: none;
+  outline: none;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+
+}
+.about-page .card p{
+  text-align: justify;
+}
+.about-page .card h3 {
+  text-decoration: underline;
+}
+
+/* ........................ */
+/* ...register_pages....... */
+/* ........................ */
+
+.register_page {
+  background-color: #0a1b49;
+}
+
+.register_page form {
+  padding: 0 40px;
+}
+
+.register_page form p input {
+  width: 100%;
+  padding: 0 5px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid #adadad;
+}
+
+.register_page .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 20px;
+  margin-top: 56px;
+
+}
+
+.register_page form li {
+  font-size: 11px;
+  color: red;
+}
+.register_page form p {
+  font-size: 11px;
+}
+
+.register_page #id_is_driver{
+   width: 20px;
+   margin-left:5px ;
+   transform: translateY(35%);
+
+}
+
+
+.register_page p:nth-child(8) label{
+  font-size: 16px;
+  font-weight:  600;
+}
+
+/* ...................... */
+/* ....homepage_image..... */
+/* ........................ */
+
+
+.banner--img {
+  height: calc(100vh-56px);
+  width: 100%;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+
+.sidebar {
+  width: 250px;
+  background-color: grey;
+  height: 100%;
+}
+
+.height-auto {
+  height: calc(100vh - 56px);
+}
+
+
+/* ................. */
+/* .....dashboard_page....... */
+/* ........................ */
+
+
+.dashboard-main {
+  height: calc(100vh - 56);
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* ......................... */
+/* ......profiles image...... */
+/* ........................ */
+
+.profile_picture {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+/* ......................... */
+/* ......fassword_reset...... */
+/* ........................ */
+
+
+.password_reset{
+  background-color: rgb(9, 9, 102);
+}
+
+.password_reset .card{
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 16px;
+  box-shadow: 18px;
+
+}
+
+.password_reset form p input{
+  width: 100%;
+  height: 40px  ;
+  padding: 0,5px;
+
+}
+
+.password_reset form button {
+  float: right;
+  font-family: inherit;
+  font-size: 15px;
+  background: royalblue;
+  color: white;
+  padding: 0.5em 1em;
+  padding-left: 0.6em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+

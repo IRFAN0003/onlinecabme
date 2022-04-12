@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% block checkout %}
+
+
+<div class="container-fluid checkout">
+    <div class="row justify-content-center">
+        <div class="col-lg-3 col-sm-3">
+            <div class="card p-3 justify-content-center">
+                <h5 class="d-flex justify-content-center align-items-center">{{user.username}}</h5>
+                <br>
+                <br>
+                <div class="btn_container ">
+                    <!-- Payment Button -->
+                    <button class="pay-btn " href="#" id="pay-btn">
+                        <span class="top-key"></span>
+                        <span class="text">Pay Now<i class="fas fa-rupee-sign me-1"></i> 200</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                      </button>
+                    {% comment %} <button class="btn btn-success w-100" >Pay - <i class="fas fa-rupee-sign me-1"></i>200</button> {% endcomment %}
+                </div>
+                </div>
+            </body>
+            
+            <!-- Razorpay's Javascript code. -->
+            <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+            <script>
+                var options = {
+                
+                // Enter the Key ID generated from the Dashboard
+                key: "{{ razorpay_merchant_key }}",
+                
+                // Amount is in currency subunits.
+                // Default currency is INR. Hence,
+                // 50000 refers to 50000 paise
+                amount: "{{ razorpay_amount }}",
+                currency: "{{ currency }}",
+                
+                // Your/store name.
+                name: "Travel Hut",
+                
+                // Pass the `id` obtained in the response of Step 1
+                order_id: "{{ razorpay_order_id }}",
+                callback_url: "{{ callback_url }}",
+                };
+                
+                // initialise razorpay with the options.
+                var rzp1 = new Razorpay(options);
+                
+                // add event listener to the payment button.
+                document.getElementById("pay-btn").onclick = function (e) {
+                rzp1.open();
+                e.preventDefault();
+                };
+            </script>
+            
+        </div>
+    </div>
+</div>
+
+
+{% endblock checkout %}

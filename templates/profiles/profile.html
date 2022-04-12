@@ -1,0 +1,78 @@
+{% extends 'profiles/dashboard.html' %} {% block profiles_page %}
+
+<div class="contaner-fluid mt-5">
+  <div class="card profile p-3">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col">
+        <img class="rounded-circle profile_picture" src="{{userprofile.image.url}}" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <table class="table table-hover table-borderless">
+                <tbody>
+                  <tr>
+                    <th>First Name</th>
+                    <td>{{userprofile.first_name}}</td>
+                  </tr>
+                  <tr>
+                    <th>Last Name</th>
+                    <td>{{userprofile.last_name}}</td>
+                  </tr>
+                  <tr>
+                    <th>Profile Picture</th>
+                    <td>{{userprofile.image}}</td>
+                  </tr>
+                  <tr>
+                    <th>Age</th>
+                    <td>{{userprofile.age}}</td>
+                  </tr>
+                  <tr>
+                    <th>Gender</th>
+                    <td>{{userprofile.gender}}</td>
+                  </tr>
+                  <tr>
+                    <th>Mobile No</th>
+                    <td>{{userprofile.phone}}</td>
+                  </tr>
+                  <tr>
+                    <th>House Name</th>
+                    <td>{{userprofile.house_name}}</td>
+                  </tr>
+                  <tr>
+                    <th>Place</th>
+                    <td>{{userprofile.place}}</td>
+                  </tr>
+                  <tr>
+                    <th>Post Office</th>
+                    <td>{{userprofile.postoffice}}</td>
+                  </tr>
+                  <tr>
+                    <th>District</th>
+                    <td>{{userprofile.district}}</td>
+                  </tr>
+                  <tr>
+                    <th>State</th>
+                    <td>{{userprofile.state}}</td>
+                  </tr>
+                  <tr>
+                    <th>Country</th>
+                    <td>{{userprofile.country}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="">
+                <a class="btn btn-primary" href="{% url 'profile_update' userprofile.id %}">Update</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+</div>

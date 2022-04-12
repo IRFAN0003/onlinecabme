@@ -1,0 +1,33 @@
+{% extends 'index.html' %} 
+{% block dashboard_page %}
+
+
+<div class="container-fluid dashboard">
+  <div class="row height-auto">
+    <div class="col-auto p-0">
+      {% include 'includes/sidebar.html' %}
+      {% include 'includes/driver_sidebar.html' %}
+
+
+    </div>
+  </div>
+
+
+<div class="col dashboard-main p-0">
+
+  {% block profiles_page %} {% endblock profiles_page %}
+  {% block listtrip_page %} {% endblock listtrip_page %}
+  {% block createtrip_page %} {% endblock createtrip_page %}
+  {% block trip_update_page %} {% endblock trip_update_page %}
+  {% block trip_delete_page %} {% endblock trip_delete_page %}
+  {% block trip_details_page %} {% endblock trip_details_page %}
+  {% block update_profile %} {% endblock update_profile %}
+
+
+
+</div>
+
+</div>
+
+
+{% endblock %}
